@@ -2,7 +2,7 @@
 
 ## Overview
 
-**DINOv2 (Self-Supervised Vision Transformer)** is a self-supervised training method from Meta Research that learns rich visual features directly from images without requiring any labels, removing one of the most time-consuming bottlenecks in building computer vision models. Pre-trained checkpoints support depth estimation, semantic segmentation, image classification, and instance retrieval, and the architecture produces dense embeddings that can underpin a wide range of downstream applications. The post covers how the method works, what tasks it supports out of the box, and how to get started with the available weights ranging from 84 MB to 4.2 GB.
+**DINOv2 (Self-Supervised Vision Transformer)** is a self-supervised training method from **Meta Research** that learns rich visual features directly from images without requiring any labels, removing one of the most time-consuming bottlenecks in building computer vision models. Pre-trained checkpoints support depth estimation, semantic segmentation, image classification, and instance retrieval, and the architecture produces dense embeddings that can underpin a wide range of downstream applications. The post covers how the method works, what tasks it supports out of the box, and how to get started with the available weights ranging from 84 MB to 4.2 GB.
 
 This project explores the use of **DINOv2** for image feature extraction, image similarity search, face recognition, and visual retrieval tasks.
 
@@ -23,6 +23,18 @@ DINOv2 generates highly discriminative image embeddings without requiring task-s
 * Image Clustering
 
 ---
+
+## How Does DINOv2 Work?
+
+DINOv2 leverages a technique called self-supervised learning, where a model is trained using images without labels. There are two major benefits of a model not requiring labels.
+
+First, a model can be trained without investing the significant time and resources to label data. Second, the model can derive more meaningful and rich representations of the image input data since the model is trained directly on the image.
+
+By training a model directly on the images, the model can learn all the context in the image. Consider the following image of solar panels:
+
+<p align="center">
+  <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-a0e8a980-c0d3-4998-b219-1245ddc9972e.png" width="800">
+</p>
 
 ## Project Structure
 
