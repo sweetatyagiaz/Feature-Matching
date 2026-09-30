@@ -1,0 +1,17 @@
+# Python environment files
+__pycache__/
+*.pyc
+.env
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE files
+.vscode/
+
+# Large surveillance video/image files or datasets
+*.mp4
+*.avi
+dataset/
+output/
