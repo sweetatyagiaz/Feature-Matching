@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project explores the use of **DINOv2 (Self-Supervised Vision Transformer)** for image feature extraction, image similarity search, face recognition, and visual retrieval tasks.
+DINOv2 is a self-supervised training method from Meta Research that learns rich visual features directly from images without requiring any labels, removing one of the most time-consuming bottlenecks in building computer vision models. Pre-trained checkpoints support depth estimation, semantic segmentation, image classification, and instance retrieval, and the architecture produces dense embeddings that can underpin a wide range of downstream applications. The post covers how the method works, what tasks it supports out of the box, and how to get started with the available weights ranging from 84 MB to 4.2 GB.
+
+This project explores the use of **DINOv2** for image feature extraction, image similarity search, face recognition, and visual retrieval tasks.
 
 DINOv2 generates highly discriminative image embeddings without requiring task-specific training. These embeddings can be indexed using FAISS for large-scale similarity search and recognition systems.
 
