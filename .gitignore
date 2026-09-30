@@ -13,5 +13,5 @@ venv/
 # Large surveillance video/image files or datasets
 *.mp4
 *.avi
-dataset/
+data/
 output/
