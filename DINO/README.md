@@ -175,9 +175,9 @@ for balanced speed and accuracy.
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/DINOv2.git
+git clone https://github.com/sweetatyagiaz/Feature-Matching/DINO.git
 
-cd DINOv2
+cd DINO
 ```
 
 ### Create Virtual Environment
