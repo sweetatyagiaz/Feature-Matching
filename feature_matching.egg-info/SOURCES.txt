@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+examples/__init__.py
+examples/find_partial_image.py
+feature_matching.egg-info/PKG-INFO
+feature_matching.egg-info/SOURCES.txt
+feature_matching.egg-info/dependency_links.txt
+feature_matching.egg-info/top_level.txt
+src/__init__.py
+src/detectors/__init__.py
+src/detectors/sift_detector.py
+src/localization/__init__.py
+src/localization/homography.py
+src/matchers/__init__.py
+src/matchers/sift_matcher.py

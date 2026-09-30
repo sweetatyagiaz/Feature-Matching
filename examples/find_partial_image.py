@@ -1,8 +1,8 @@
 import cv2
 
-from src.detectors.sift_detector import SIFTDetector
-from src.matchers.sift_matcher import SIFTMatcher
-from src.localization.homography import find_object
+from feature_matching.detectors.sift_detector import SIFTDetector
+from feature_matching.matchers.sift_matcher import SIFTMatcher
+from feature_matching.localization.homography import find_object
 
 
 query = cv2.imread(
