@@ -76,7 +76,7 @@ DINOv2 can be used for predicting the depth of each pixel in an image, achieving
 
 ### Image Segmentation
 
-DINOv2 is capable of segmenting objects in an image. Meta Research evaluated DINOv2 against the ADE20K and Cityscapes benchmarks and achieved “competitive results” without any fine-tuning when compared to other relevant models, according to the <a target=_blank href="https://dinov2.metademolab.com/demos?category=segmentation&ref=blog.roboflow.com">instance segmentation example in the model playground</a>. There is no official image segmentation head that accompanies the repository.
+DINOv2 is capable of segmenting objects in an image. Meta Research evaluated DINOv2 against the ADE20K and Cityscapes benchmarks and achieved “competitive results” without any fine-tuning when compared to other relevant models, according to the <a target="_blank" href="https://dinov2.metademolab.com/demos?category=segmentation&ref=blog.roboflow.com">instance segmentation example in the model playground</a>. There is no official image segmentation head that accompanies the repository.
 
 Such code would need to be written manually in order to use DINOv2 for segmentation tasks.
 
