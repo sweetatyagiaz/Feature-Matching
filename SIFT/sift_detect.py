@@ -18,7 +18,7 @@ flann=cv2.FlannBasedMatcher(flannParam,{})
 
 
 
-train_img= cv2.imread("../res/obama1.jpg",0)  # train image
+train_img= cv2.imread("./obama1.jpg",0)  # train image
 kp1,desc1= sift.detectAndCompute(train_img,None) # find the keypoints and descriptors with SIFT
 train_img_kp= cv2.drawKeypoints(train_img,kp1,None,(255,0,0),4) # draw keypoints of the train image
 plt.imshow(train_img_kp)    # show the train image keypoints
