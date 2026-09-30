@@ -36,6 +36,56 @@ By training a model directly on the images, the model can learn all the context 
   <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-a0e8a980-c0d3-4998-b219-1245ddc9972e.png" width="800">
 </p>
 
+We could assign this image a label such as “an aerial photograph of solar panels” but this misses out on a lot of the information in the image; documenting deeper knowledge for a large dataset is difficult. But, DINOv2 shows that labels are not necessary for many tasks such as classification: instead, you can train on the unlabelled images directly.
+
+<p align="center">
+  <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-314e15d1-8445-412e-97ec-5f6a9944300c.png" width="800">
+</p>
+
+To prepare data for the model, Meta researchers used data from curated and uncurated data sources. These images were then embedded. The uncurated images were deduplicated, then the deduplicated images were combined with the curated images to create the initial dataset used for training the model.
+
+Prior to DINOv2, a common method of building general computer vision models that embed semantics of an entire image has been using a pre-training step with image-text pairs. For example, OpenAI’s CLIP model, which can work on tasks from image retrieval to classification, was trained on 400 million image-text pairs.
+
+CLIP learned semantic information about the contents of images based on the text pairs. DINOv2, in contrast, was trained on 142,109,386 images. The table below, featured in the DINOv2 paper, shows how the data was sourced for the dataset:
+
+<p align="center">
+  <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/Screenshot-2023-05-31-at-09.04.45-1.png" width="800">
+</p>
+
+DINOv2 circumvents the requirement to have these labels, enabling researchers and practitioners to build large models without requiring a labeling phase.
+
+---
+
+## What Can We Do With DINOv2?
+
+As a result of the increased information DINOv2 learns by training directly on images, the model has been found to perform effectively on many image tasks, including depth estimation, a task for which separate models are usually employed.
+
+Meta AI researchers wrote custom model heads to accomplish depth estimation, **image classification** (using linear classification and KNN), **image segmentation**, and instance retrieval. There are no out-of-the-box heads available for depth estimation or segmentation, which means one would need to write a custom head to use them.
+
+Let’s talk through a few of the use cases of the DINOv2 model.
+
+
+### Depth Estimation
+
+DINOv2 can be used for predicting the depth of each pixel in an image, achieving state-of-the-art performance when evaluated on the NYU Depth and SUN RGB-D depth estimation benchmark datasets. Meta Research created a depth estimation model with a DPT decoder for use in their repository, although this is not open source. Thus, it is necessary to write the code that uses the model backbone to construct a depth estimation model.
+
+<p align="center">
+  <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-709dc95f-f2ae-436d-b14e-e8ff6245886f.png" width="800">
+</p>
+
+
+### Image Segmentation
+
+DINOv2 is capable of segmenting objects in an image. Meta Research evaluated DINOv2 against the ADE20K and Cityscapes benchmarks and achieved “competitive results” without any fine-tuning when compared to other relevant models, according to the <a>instance segmentation example in the model playground</a>. There is no official image segmentation head that accompanies the repository.
+
+Such code would need to be written manually in order to use DINOv2 for segmentation tasks.
+
+<p align="center">
+  <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-82a71d16-49ca-419f-ab8b-6155560436dc.png" width="800">
+</p>
+
+
+
 ## Project Structure
 
 ```text
