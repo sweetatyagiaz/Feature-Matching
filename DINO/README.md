@@ -76,7 +76,7 @@ DINOv2 can be used for predicting the depth of each pixel in an image, achieving
 
 ### Image Segmentation
 
-DINOv2 is capable of segmenting objects in an image. Meta Research evaluated DINOv2 against the ADE20K and Cityscapes benchmarks and achieved “competitive results” without any fine-tuning when compared to other relevant models, according to the <a target="_blank" href="https://dinov2.metademolab.com/demos?category=segmentation&ref=blog.roboflow.com">instance segmentation example in the model playground</a>. There is no official image segmentation head that accompanies the repository.
+DINOv2 is capable of segmenting objects in an image. Meta Research evaluated DINOv2 against the ADE20K and Cityscapes benchmarks and achieved “competitive results” without any fine-tuning when compared to other relevant models, according to the <a href="https://dinov2.metademolab.com/demos?category=segmentation&ref=blog.roboflow.com">instance segmentation example in the model playground</a>. There is no official image segmentation head that accompanies the repository.
 
 Such code would need to be written manually in order to use DINOv2 for segmentation tasks.
 
@@ -84,6 +84,25 @@ Such code would need to be written manually in order to use DINOv2 for segmentat
   <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-82a71d16-49ca-419f-ab8b-6155560436dc.png" width="800">
 </p>
 
+
+### Classification
+
+DINOv2 is suitable for use in image classification tasks. According to Meta Research, the performance of DINOv2 is “competitive or better than the performance of text-image models such as CLIP and OpenCLIP on a wide array of tasks”.
+
+For instance, consider a scenario where you want to classify images of <a href="https://dinov2.metademolab.com/demos?category=segmentation&ref=blog.roboflow.com">vehicles on a construction site</a>. You could use DINOv2 to classify vehicles into specified classes using a nearest neighbor approach or linear classification.
+
+With that said, a custom classifier head is needed to work with the DINOv2 embeddings.
+
+
+### Instance Retrieval
+
+DINOv2 can be used as part of an image information retrieval system that accepts images and returns related images. To do so, one would embed all of the images in a dataset. For each search, the provided image would be embedded and then images with a high cosine similarity to the embedded query image would be returned.
+
+In the Meta Research playground accompanying DINOv2, there is a system that retrieves images related to landmarks. This is used to find art pieces that are similar to an image.
+
+<p align="center">
+  <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-ed388222-d060-494e-843c-b8a2c1941894.png" width="800">
+</p>
 
 
 ## Project Structure
