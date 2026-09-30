@@ -104,8 +104,9 @@ In the Meta Research playground accompanying DINOv2, there is a system that retr
   <img src="https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/2023/05/data-src-image-ed388222-d060-494e-843c-b8a2c1941894.png" width="800">
 </p>
 
+---
 
-## Project Structure
+# Project Structure
 
 ```text
 DINOv2/
