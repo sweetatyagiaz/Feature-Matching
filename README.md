@@ -1,4 +1,4 @@
-# Feature Matching
+# Introduction To Feature Detection And Matching
 
 A comprehensive Computer Vision project for locating, matching, and identifying objects, logos, faces, and partial images within larger images using traditional feature-based techniques and modern deep learning approaches.
 
@@ -6,7 +6,11 @@ A comprehensive Computer Vision project for locating, matching, and identifying 
 
 ## Overview
 
-Feature Matching is a fundamental Computer Vision technique used to determine whether a query image exists within another image and to locate its position.
+Feature detection and matching is an important task in many computer vision applications, such as structure-from-motion, image retrieval, object detection, and more. In this series, we will be talking about local feature detection and matching.
+
+<p align="center">   
+    <img src="https://cdn-images-1.medium.com/max/2000/0*y8ZLm7kQiIIaUKpj.jpg" />
+</p>
 
 This repository provides implementations of:
 
