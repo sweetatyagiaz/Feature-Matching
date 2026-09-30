@@ -12,6 +12,24 @@ Feature detection and matching is an important task in many computer vision appl
     <img src="https://cdn-images-1.medium.com/max/2000/0*y8ZLm7kQiIIaUKpj.jpg" />
 </p>
 
+## Application Of Feature Detection And Matching
+
+* Automate object tracking
+
+* Point matching for computing disparity
+
+* Stereo calibration(Estimation of the fundamental matrix)
+
+* Motion-based segmentation
+
+* Recognition
+
+* 3D object reconstruction
+
+* Robot navigation
+
+---
+
 This repository provides implementations of:
 
 * SIFT (Scale-Invariant Feature Transform)
